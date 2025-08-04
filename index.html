@@ -1,43 +1,41 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>TradingView Widget</title>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        background: white;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="tradingview-widget-container">
-      <div class="tradingview-widget-container__widget"></div>
-      <div class="tradingview-widget-copyright">
-        <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
-          <span class="blue-text">Quotes by TradingView</span>
-        </a>
-      </div>
-      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
-      {
-        "symbols": [
-          {
-            "proName": "OANDA:AUDUSD",
-            "title": "AUD/USD"
-          },
-          {
-            "proName": "FX_IDC:AUDKRW",
-            "title": "AUD/KRW"
-          }
-        ],
-        "colorTheme": "light",
-        "locale": "en",
-        "largeChartUrl": "",
-        "isTransparent": true,
-        "showSymbolLogo": true
-      }
-      </script>
+<!-- TradingView Widget BEGIN -->
+<div style="display: flex; gap: 20px;">
+  <!-- AUD/USD -->
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <div class="tradingview-widget-copyright">
+      <a href="https://www.tradingview.com/symbols/OANDA-AUDUSD/?exchange=OANDA" rel="noopener nofollow" target="_blank">
+        <span class="blue-text">AUDUSD quotes by TradingView</span>
+      </a>
     </div>
-  </body>
-</html>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+    {
+      "symbol": "OANDA:AUDUSD",
+      "colorTheme": "light",
+      "isTransparent": false,
+      "locale": "en",
+      "width": 300
+    }
+    </script>
+  </div>
+
+  <!-- AUD/KRW -->
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <div class="tradingview-widget-copyright">
+      <a href="https://www.tradingview.com/symbols/FX_IDC-AUDKRW/?exchange=FX_IDC" rel="noopener nofollow" target="_blank">
+        <span class="blue-text">AUDKRW quotes by TradingView</span>
+      </a>
+    </div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+    {
+      "symbol": "FX_IDC:AUDKRW",
+      "colorTheme": "light",
+      "isTransparent": false,
+      "locale": "en",
+      "width": 300
+    }
+    </script>
+  </div>
+</div>
+<!-- TradingView Widget END -->
